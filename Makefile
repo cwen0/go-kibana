@@ -10,7 +10,7 @@ GOCHECKER := $(GOFILTER) | awk '{ print } END { if (NR > 0) { exit 1 } }'
 default: test
 
 test: check
-	GO build ./...
+	$(GO) build ./...
 
 check:
 	GO111MODULE=off go get golang.org/x/lint/golint
